@@ -12,42 +12,45 @@
         <div class="contenedorPresentacion">
             <h1 class="nombre">Omar Águila Lira</h1>
             <h2 class="tituloPagina">Mi página web</h2>
-            <div class="presentacion">
+            <div class="presentacion contenedorSecciones">
                 <h3 class="tituloPresentacion">¿Quién soy?</h3>
                 <p class="parrafoPresentacion">
                     ¡Hola a todos! Permítanme presentarme, mi nombre es Omar, soy una persona apasionada y polifacética que se sumerge en el fascinante mundo de la programación, con un enfoque especial en el desarrollo web. También me gusta deleitarme con la lectura de temas variados y dedico un tiempo regular a actividades físicas y ejercicios.
                 </p>
             </div>
-            <div class="tecnologiasFavoritas">
+            <div class="tecnologiasFavoritas contenedorSecciones">
                 <h3 class="tituloTecnologias">Mis tecnologías favoritas</h3>
                 <div class="tecnologiasTarjetas">
-                    <div class="tarjeta">
-                        <h3>HTML</h3>
-                        <div class="imagenTarjeta">
-                            <img src="assets/img/HTML.png" alt="logoHtml">
+                    <div class="tarjeta tarjetaHtml">
+                        <div class="tarjetaNombre">
+                            <h3>HTML</h3>
                         </div>
                     </div>
-                    <div class="tarjeta">
-                        <h3>CSS</h3>
-                        <div class="imagenTarjeta">
-                            <img src="assets/img/css.png" alt="logoCss">
+                    <div class="tarjeta tarjetaCss">
+                        <div class="tarjetaNombre">
+                            <h3>CSS</h3>
                         </div>
                     </div>
-                    <div class="tarjeta">
-                        <h3>JavaScript</h3>
-                        <div class="imagenTarjeta">
-                            <img src="assets/img/JavaScript.png" alt="logoJavaScript">
+                    <div class="tarjeta tarjetaJs">
+                        <div class="tarjetaNombre">
+                            <h3>JavaScript</h3>
                         </div>
                     </div>
     
                 </div>
             </div>
-            <div class="actividadesFavoritas">
-                <input type="text" class="tituloActividad">
-                <input type="text" class="descripcionActividad">
-                <input type="text" class="imagenActividad">
-                <input type="button">
-            </div>
+            <form action="">
+                <div class="actividadesFavoritas contenedorSecciones">
+                    <legend>Mis actividades favoritas</legend>
+                    <label for="tituloActividad">Nombre de la actividad</label>
+                    <input type="text" class="inputActividad" id="tituloActividad">
+                    <label for="descripcionActividad">Descripción de la actividad</label>
+                    <input type="text" class="inputActividad" id="descripcionActividad">
+                    <label for="linkImagen">Link de la imagen</label>
+                    <input type="text" class="inputActividad" id="linkImagen">
+                    <input type="button" value="Agregar actividad">
+                </div>
+            </form>
             <div class="actividadesAgregadas">
                 No hay actividades
             </div>

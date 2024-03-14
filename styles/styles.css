@@ -1,5 +1,5 @@
 .contenedorGeneral {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: #303DFF;
     display: flex;
@@ -9,6 +9,10 @@
 
 .contenedorPresentacion {
     margin: 0 5rem;
+}
+
+.contenedorPresentacion .nombre, .tituloPagina {
+    color: white;
 }
 
 .contenedorPresentacion .nombre {
@@ -21,12 +25,13 @@
     text-align: center;
 }
 
-.contenedorPresentacion .presentacion {
+.contenedorSecciones {
     background-color: #D9F2FC;
-    padding: 0.5rem;
     border-radius: 0.4rem;
-    
+    padding: 0.5rem;
 }
+
+
 
 .contenedorPresentacion .presentacion .tituloPresentacion {
     text-align: center;
@@ -40,9 +45,6 @@
 
 .tecnologiasFavoritas {
     margin: 1rem 0;
-    background-color: #D9F2FC;
-    border-radius: 0.4rem;
-    padding: 0.5rem;
 }
 
 .tecnologiasFavoritas .tituloTecnologias {
@@ -58,20 +60,63 @@
 }
 
 .tecnologiasFavoritas .tecnologiasTarjetas .tarjeta {
-    width: 110px;
+    
+    height: 200px;
+    width: 20%;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
 }
 
-.tecnologiasTarjetas .tarjeta h3 {
-    text-align: center;
-    margin-bottom: 0.5rem;
+.tecnologiasTarjetas .tarjetaHtml {
+    background: url("../assets/img/html-5.png");
+    
+}
+.tecnologiasTarjetas .tarjetaCss {
+    background-image: url("../assets/img/css-3.png");
+}
+ 
+.tecnologiasTarjetas .tarjetaJs {
+    background-image: url("../assets/img/secuencia-de-comandos-de-java.png");
+
 }
 
-.tecnologiasFavoritas .tecnologiasTarjetas .imagenTarjeta {
-    width: 110px;
-    height: 110px;
-}
-
-.tecnologiasTarjetas .imagenTarjeta img {
+.tecnologiasTarjetas .tarjeta .tarjetaNombre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
+    z-index: 2;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.tarjeta .tarjetaNombre h3 {
+    text-align: center;
+}
+
+.tarjeta:hover .tarjetaNombre {
+    opacity: 1;
+}
+
+.tarjeta:hover {
+    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, 0.2);
+    transform: translate(1%, -4%);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.actividadesFavoritas {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.actividadesFavoritas {
+    
 }
