@@ -1,10 +1,11 @@
 .contenedorGeneral {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     background-color: #303DFF;
     display: flex;
     /* align-items: center; */
     justify-content: center;
+    flex-direction: column;
 }
 
 .contenedorPresentacion {
@@ -114,9 +115,90 @@
 .actividadesFavoritas {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 3.5rem;
+    
+}
+
+.contenedorActividadesFavoritas {
+    margin-bottom: 1rem;
 }
 
 .actividadesFavoritas {
-    
+    margin: 0.5rem 0 0 0;
+}
+
+.tituloActividades {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.contenedorInputs {
+    position: relative;
+    width: 100%;
+}
+
+.inputActividad {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    border: 2px solid #babbbf;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0.5rem;
+    transition: all 160ms ease-in;
+}
+
+.inputActividad:hover {
+    border-color: #5aa3c0;
+}
+
+.inputActividad:focus {
+    border-color: #44c9fe;
+}
+
+.labelActividades {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0 0.3rem;
+    cursor: text;
+    transition: top 200ms ease-in,
+    left 200ms ease-in font-size 200ms ease-in;
+    background-color: #D9F2FC;
+}
+
+.inputActividad:focus ~ .labelActividades, .inputActividad:not(:placeholder-shown).inputActividad:not(:focus) ~ .labelActividades {
+    top: -0.4rem;
+    font-size:  0.8rem;
+    left: 0.8rem;
+
+}
+
+.BotonAgregarActividad {
+    margin: 0 auto;
+    width: auto;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: 0.2s;
+    background-color: #95dffc;
+}
+
+.BotonAgregarActividad:hover {
+    background-color: #0379a8a7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.BotonAgregarActividad:active {
+    background-color: #4d8fa8;
+}
+
+.actividadesAgregadas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

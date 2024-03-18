@@ -39,19 +39,25 @@
     
                 </div>
             </div>
-            <form action="">
+            <form class="contenedorSecciones contenedorActividadesFavoritas" action="">
+                <legend><h3 class="tituloActividades">Mis actividades favoritas</h3></legend>
                 <div class="actividadesFavoritas contenedorSecciones">
-                    <legend>Mis actividades favoritas</legend>
-                    <label for="tituloActividad">Nombre de la actividad</label>
-                    <input type="text" class="inputActividad" id="tituloActividad">
-                    <label for="descripcionActividad">Descripción de la actividad</label>
-                    <input type="text" class="inputActividad" id="descripcionActividad">
-                    <label for="linkImagen">Link de la imagen</label>
-                    <input type="text" class="inputActividad" id="linkImagen">
-                    <input type="button" value="Agregar actividad">
+                    <div class="contenedorInputs">
+                        <input placeholder=" " type="text" class="inputActividad" id="tituloActividad">
+                        <label class="labelActividades" for="tituloActividad">Nombre de la actividad</label>
+                    </div>
+                    <div class="contenedorInputs">
+                        <input placeholder=" " type="text" class="inputActividad" id="descripcionActividad">
+                        <label class="labelActividades" for="descripcionActividad">Descripción de la actividad</label>
+                    </div>
+                    <div class="contenedorInputs">
+                        <input placeholder=" " type="text" class="inputActividad" id="linkImagen">
+                        <label class="labelActividades" for="linkImagen">Link de la imagen</label>
+                    </div>
+                    <input class="BotonAgregarActividad" type="button" value="Agregar actividad">
                 </div>
             </form>
-            <div class="actividadesAgregadas">
+            <div class="actividadesAgregadas contenedorSecciones">
                 No hay actividades
             </div>
         </div>
