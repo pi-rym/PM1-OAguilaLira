@@ -91,6 +91,8 @@ const agragarActividades = () => {
   const descripcion = inputDescripcion.value;
   const imagen = inputImagen.value;
   
+  let validacionURL = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+
   // Validar que los campos estén completos 
   if (!titulo){
     return alert('Por favor complete el campo: Nombre de la actividad');
@@ -98,9 +100,16 @@ const agragarActividades = () => {
   else if(!descripcion){
     return alert('Por favor complete el campo: Descripción de la actividad')
   }
-  else if(!imagen) {
-    return alert('Por favor complete el campo: Link de la imagen')
-  }
+  else {
+    if(!imagen) {
+      return alert('Por favor complete el campo: Link de la imagen')
+    }
+    
+    else if (!validacionURL.test(imagen)){
+      return alert('Por favor revise el formato de la URL ingresada')
+    }
+    
+  } 
   nuevoRepositorio.createActivity(titulo, descripcion, imagen);
   actividadesAhtml();
   inputTitulo.value = '';
